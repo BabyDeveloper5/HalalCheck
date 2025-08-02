@@ -1,4 +1,4 @@
-package com.example.halalcheck.ui.screen
+package com.example.halalcheck.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

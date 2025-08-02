@@ -4,9 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.halalcheck.ui.screen.HomeScreen
-import com.example.halalcheck.ui.screen.OcrScreen
-import com.example.halalcheck.ui.screen.ResultScreen
+import com.example.halalcheck.ui.screens.HomeScreen
+import com.example.halalcheck.ui.screens.OcrScreen
+import com.example.halalcheck.ui.screens.ResultScreen
 
 @Composable
 fun Navigation(){
