@@ -8,7 +8,7 @@ import javax.inject.Inject
 class GetAllProductsUseCase @Inject constructor(
     private val repository: ProductRepository
 ){
-    suspend operator fun invoke(): Flow<List<ProductEntity>>{
+    operator fun invoke(): Flow<List<ProductEntity>>{
         return repository.getAllProducts()
     }
 }
