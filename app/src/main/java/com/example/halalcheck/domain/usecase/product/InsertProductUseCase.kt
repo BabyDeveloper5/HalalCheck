@@ -4,7 +4,7 @@ import com.example.halalcheck.data.local.entity.ProductEntity
 import com.example.halalcheck.data.repository.ProductRepository
 import javax.inject.Inject
 
-class InsertProduct @Inject constructor(
+class InsertProductUseCase @Inject constructor(
     private val repository: ProductRepository
 ){
     suspend operator fun invoke(product: ProductEntity){

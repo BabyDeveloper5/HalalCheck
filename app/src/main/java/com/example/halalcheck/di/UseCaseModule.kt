@@ -1,10 +1,10 @@
 package com.example.halalcheck.di
 
 import com.example.halalcheck.data.repository.ProductRepository
-import com.example.halalcheck.domain.usecase.product.DeleteProduct
-import com.example.halalcheck.domain.usecase.product.GetAllProducts
-import com.example.halalcheck.domain.usecase.product.GetProductByBarcode
-import com.example.halalcheck.domain.usecase.product.InsertProduct
+import com.example.halalcheck.domain.usecase.product.DeleteProductUseCase
+import com.example.halalcheck.domain.usecase.product.GetAllProductsUseCase
+import com.example.halalcheck.domain.usecase.product.GetProductByBarcodeUseCase
+import com.example.halalcheck.domain.usecase.product.InsertProductUseCase
 import com.example.halalcheck.domain.usecase.product.ProductUseCases
 import com.google.android.datatransport.runtime.dagger.Provides
 import dagger.Module
@@ -21,10 +21,10 @@ object UseCaseModule{
         repository: ProductRepository
     ): ProductUseCases{
         return ProductUseCases(
-            insertProduct = InsertProduct(repository),
-            deleteProduct = DeleteProduct(repository),
-            getAllProducts = GetAllProducts(repository),
-            getProductByBarcode = GetProductByBarcode(repository)
+            insertProduct = InsertProductUseCase(repository),
+            deleteProduct = DeleteProductUseCase(repository),
+            getAllProducts = GetAllProductsUseCase(repository),
+            getProductByBarcode = GetProductByBarcodeUseCase(repository)
         )
     }
 }

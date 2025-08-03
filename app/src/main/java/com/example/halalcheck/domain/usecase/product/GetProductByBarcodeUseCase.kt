@@ -5,10 +5,10 @@ import com.example.halalcheck.data.repository.ProductRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetAllProducts @Inject constructor(
+class GetProductByBarcodeUseCase @Inject constructor(
     private val repository: ProductRepository
 ){
-    suspend operator fun invoke(): Flow<List<ProductEntity>>{
-        return repository.getAllProducts()
+    suspend operator fun invoke(barcode: String): Flow<ProductEntity?> {
+        return repository.getProductByBarcode(barcode)
     }
 }

@@ -18,7 +18,7 @@ class ProductRepository @Inject constructor(
         return productDao.getAllProducts()
     }
 
-    suspend fun getProductByBarcode(barcode: String): Flow<ProductEntity?> {
+    fun getProductByBarcode(barcode: String): Flow<ProductEntity?> {
         return productDao.getProductByBarcode(barcode)
     }
 }
