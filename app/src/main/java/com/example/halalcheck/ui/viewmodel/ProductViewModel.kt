@@ -1,5 +1,6 @@
 package com.example.halalcheck.ui.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.halalcheck.data.local.entity.ProductEntity
@@ -37,12 +38,14 @@ class ProductViewModel @Inject constructor(
 
     fun insertProduct(product: ProductEntity){
         viewModelScope.launch {
+            Log.d("ProductViewModel", "Inserting product: $product")
             productUseCases.insertProduct(product)
         }
     }
 
     fun deleteProduct(product: ProductEntity){
         viewModelScope.launch {
+            Log.d("ProductViewModel", "Deleting product: $product")
             productUseCases.deleteProduct(product)
         }
     }
