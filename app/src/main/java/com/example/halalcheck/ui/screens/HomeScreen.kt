@@ -54,57 +54,7 @@ fun HomeScreen(navController: NavController){
             verticalArrangement = Arrangement.SpaceBetween,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            /*
-            Button(
-                onClick = { navController.navigate("ocr") }
-            ) {
-                Text(text = "Start Ingredient Scan")
-            }
-            if (BuildConfig.SHOW_DEV_CONTROLS) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceEvenly
-                ) {
-                    Button(onClick = {
-                        val sample = ProductEntity(
-                            barcode = "1234567890",
-                            name = "Sweetened Water",
-                            ingredients = "Sugar, Water",
-                            isHalal = true
-                        )
-                        coroutineScope.launch {
-                            viewModel.insertProduct(sample)
-                        }
-                    }) {
-                        Text("Add Test Product")
-                    }
 
-                    Button(onClick = {
-                        val sample = ProductEntity(
-                            barcode = "1234567890",
-                            name = "Sweetened Water",
-                            ingredients = "Sugar, Water",
-                            isHalal = true
-                        )
-                        coroutineScope.launch {
-                            viewModel.deleteProduct(sample)
-                        }
-                    }) {
-                        Text("Delete Test Product")
-                    }
-                }
-            }
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            // Show the current products
-            for (product in products) {
-                Text(text = "${product.name} (${product.barcode})\n" +
-                        "ingredients: ${ product.ingredients}\n" +
-                        if (product.isHalal)"Halal" else "Haram"
-                )
-            }
-            */
             Spacer(modifier = Modifier.height(16.dp))
 
             // Branding / Short instructions
